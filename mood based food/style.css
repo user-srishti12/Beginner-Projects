@@ -1,0 +1,143 @@
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at center, #1b1b4d, #0f0c29 70%);
+  font-family: Arial, sans-serif;
+  color: cyan;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  text-shadow: 0 0 15px cyan;
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid cyan;
+  background: rgba(0, 255, 255, 0.08);
+  color: cyan;
+  backdrop-filter: blur(10px);
+  outline: none;
+}
+
+.main-container > button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(45deg, #00f2ff, #00ffa6);
+  box-shadow: 0 0 20px #00f2ff;
+  transition: 0.3s;
+}
+
+.main-container > button:hover {
+  transform: scale(1.05);
+}
+
+.card-stack {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  margin-top: 10px;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  padding: 30px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 255, 0.1),
+    rgba(0, 255, 255, 0.05)
+  );
+
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  backdrop-filter: blur(30px);
+
+  box-shadow:
+    0 0 20px cyan,
+    0 0 60px rgba(0, 255, 255, 0.5),
+    inset 0 0 30px rgba(0, 255, 255, 0.3);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.card h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.nah, .yeah {
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nah {
+  background: linear-gradient(45deg, #ff004c, #ff3366);
+  box-shadow: 0 0 20px #ff004c;
+  color: white;
+}
+
+.yeah {
+  background: linear-gradient(45deg, #00ff88, #00ffaa);
+  box-shadow: 0 0 20px #00ff88;
+  color: black;
+}
+
+.nah:hover, .yeah:hover {
+  transform: scale(1.15);
+}
+
+/* ===== SLIDE ANIMATION ===== */
+.swipe-left {
+  transform: translateX(-120%) rotate(-25deg);
+  opacity: 0;
+}
+
+.swipe-right {
+  transform: translateX(120%) rotate(25deg);
+  opacity: 0;
+}

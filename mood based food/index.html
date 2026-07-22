@@ -1,0 +1,41 @@
+<body>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="main-container">
+
+  <h1>🍽 Mood Based Food Matcher</h1>
+
+  <select id="moodSelect">
+    <option value="">Select Your Mood</option>
+    <option value="happy">Happy</option>
+    <option value="sad">Sad</option>
+    <option value="party">Party</option>
+    <option value="lazy">Lazy</option>
+    <option value="hungry">Hungry</option>
+    <option value="romantic">Romantic</option>
+    <option value="celebration">Celebration</option>
+  </select>
+  <!-- <audio id="swipeSound" src="swipe.mp3"></audio> -->
+
+
+  <button onclick="start()">Start</button>
+
+  <div class="card-stack">
+    <div class="card" id="card">
+      <h2 id="foodName">🍕 Pizza</h2>
+      <p id="foodMood">Happy • Party</p>
+
+      <div class="buttons">
+        <button class="nah" onclick="swipe('left')">Nah</button>
+        <button class="yeah" onclick="swipe('right')">Yeah</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="food.js"></script>
+<script src="script.js"></script>
+
+</body>
