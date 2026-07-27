@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+.header{
+    text-align:center;
+    color:aliceblue;
+    background-color: green;
+
+}
+.navbar{
+    background-color:grey;
+    color:white;
+    padding:10px;
+
+}
+.navbar ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+    justify-content:center;
+
+}
+a{
+    color:white;
+    text-decoration:none;
+
+}
+.main-heading{
+    margin:30px;
+    color:black;
+    text-align:center;
+
+}
+.search-bar{
+    justify-content:center;
+    gap:30px;
+    text-align:center;
+
+}
+button{
+    color:white;
+    background-color:rgb(64, 64, 224);
+
+}
+.second-heading{
+    text-align:center;
+    color:rgb(20, 18, 18);
+    margin-top:20px;
+
+}
+.job-card{
+    border:1px solid black;
+    box-sizing: border-box;
+    height:200px;
+    width:400px;
+    padding:20px;
+    border-radius:10px;
+    margin:10px;
+    justify-content:center;
+    text-align:center;
+    line-height:1.5;
+    
+}
+.job-listings{
+    display:flex;
+    justify-content:center;
+}
+.apply-button{
+    color:white;
+    background-color:seagreen;
+
+}
+.footer{
+    background-color:grey;
+    color:white;
+    text-align:center;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:30px;
+    justify-content:center;
+    position:fixed;
+
+
+}
