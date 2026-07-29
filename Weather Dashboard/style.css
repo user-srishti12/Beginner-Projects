@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.weather-container {
+    width: 100%;
+    max-width: 500px;
+
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+
+    text-align: center;
+}
+
+h1 {
+    color: #222;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+
+/* Search Section */
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#cityInput {
+    flex: 1;
+
+    padding: 14px;
+
+    border: 2px solid #ddd;
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+#cityInput:focus {
+    border-color: #4facfe;
+}
+
+#searchButton {
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #4facfe;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#searchButton:hover {
+    background: #2389e8;
+    transform: translateY(-2px);
+}
+
+#searchButton:active {
+    transform: translateY(0);
+}
+
+
+/* Weather Result */
+
+#weatherResult {
+    background: #f5f9ff;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e1eaf5;
+}
+
+#cityName {
+    font-size: 28px;
+    color: #222;
+
+    margin-bottom: 20px;
+}
+
+
+/* Weather Information */
+
+#weatherResult p {
+    background: white;
+
+    padding: 14px;
+
+    margin: 10px 0;
+
+    border-radius: 10px;
+
+    color: #555;
+
+    font-size: 17px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+#temperature,
+#humidity,
+#windSpeed {
+    font-weight: bold;
+    color: #222;
+}
+
+#weatherCondition {
+    font-size: 20px !important;
+    font-weight: bold;
+
+    margin-top: 15px !important;
+}
+
+
+/* Error Message */
+
+#errorMessage {
+    margin-top: 15px;
+
+    color: #e63946;
+
+    font-weight: bold;
+
+    min-height: 20px;
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .weather-container {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    #cityInput,
+    #searchButton {
+        width: 100%;
+    }
+
+    #cityName {
+        font-size: 24px;
+    }
+
+    #weatherResult p {
+        font-size: 16px;
+    }
+}
+
+
+/* Very Small Screens */
+
+@media (max-width: 350px) {
+
+    .weather-container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    #weatherResult {
+        padding: 15px;
+    }
+}
